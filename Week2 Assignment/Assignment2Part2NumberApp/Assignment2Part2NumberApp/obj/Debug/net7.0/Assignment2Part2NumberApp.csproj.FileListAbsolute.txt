@@ -1,0 +1,15 @@
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\bin\Debug\net7.0\Assignment2Part2NumberApp.exe
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\bin\Debug\net7.0\Assignment2Part2NumberApp.deps.json
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\bin\Debug\net7.0\Assignment2Part2NumberApp.runtimeconfig.json
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\bin\Debug\net7.0\Assignment2Part2NumberApp.dll
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\bin\Debug\net7.0\Assignment2Part2NumberApp.pdb
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\Assignment2Part2NumberApp.csproj.AssemblyReference.cache
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\Assignment2Part2NumberApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\Assignment2Part2NumberApp.AssemblyInfoInputs.cache
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\Assignment2Part2NumberApp.AssemblyInfo.cs
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\Assignment2Part2NumberApp.csproj.CoreCompileInputs.cache
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\Assignment2Part2NumberApp.dll
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\refint\Assignment2Part2NumberApp.dll
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\Assignment2Part2NumberApp.pdb
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\Assignment2Part2NumberApp.genruntimeconfig.cache
+C:\Users\mario\source\repos\Assignment2Part2NumberApp\Assignment2Part2NumberApp\obj\Debug\net7.0\ref\Assignment2Part2NumberApp.dll

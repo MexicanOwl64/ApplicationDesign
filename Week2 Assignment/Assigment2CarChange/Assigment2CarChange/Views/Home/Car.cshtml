@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Car";
+    Styles.Render("~/Content/CarSytleSheet.css");
+    Scripts.Render("~/Scripts/CarJavaScript.js");
+}
+<script>
+    function blueCar2() //Changes the text of car2 to blue
+    {
+        document.getElementById('Car2').style.color="blue"; 
+    }
+</script>
+
+<h1>Car Change Thing</h1>
+
+<div id="car1Center">
+    <p id="Car1">Car 1</p>
+    <button onclick="document.getElementById('Car1').style.color='Red'">Press for Red</button> 
+</div>
+
+<div id="car2Center">
+    <p id="Car2">Car 2</p>
+    <button onclick="blueCar2()">Press for blue</button>
+</div>
+
+<div id="car3Center">
+    <p id="Car3">Car 3</p>
+    <button onclick="purpleCar3()">Press for Large Purple Text</button>
+</div>
+
