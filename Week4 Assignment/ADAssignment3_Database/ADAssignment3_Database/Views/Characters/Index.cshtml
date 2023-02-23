@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ADAssignment3_Database.Character>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th style=" background-color: lightgreen;">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th style=" background-color: lightblue;">
+            @Html.DisplayNameFor(model => model.Element_Type)
+        </th>
+        <th style=" background-color: lightgrey;">
+            @Html.DisplayNameFor(model => model.Job_Class)
+        </th>
+        <th style=" background-color: lightcoral;">
+            @Html.DisplayNameFor(model => model.ATK)
+        </th>
+        <th style=" background-color: lightgoldenrodyellow;">
+            @Html.DisplayNameFor(model => model.DEF)
+        </th>
+        <th style=" background-color: lightcyan;">
+            @Html.DisplayNameFor(model => model.Mana)
+        </th>
+        <th style=" background-color: lightcoral;">
+            @Html.DisplayNameFor(model => model.HP_Initial)
+        </th>
+        <th style=" background-color: lightcoral;">
+            @Html.DisplayNameFor(model => model.HP_Max)
+        </th>
+        <th style=" background-color: lightpink;">
+            @Html.DisplayNameFor(model => model.NPC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Element_Type)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Job_Class)
+    </td>
+    <td style="color: red;">
+        @Html.DisplayFor(modelItem => item.ATK)
+    </td>
+    <td style="color: yellow;">
+        @Html.DisplayFor(modelItem => item.DEF)
+    </td>
+    <td style="color: blue;">
+        @Html.DisplayFor(modelItem => item.Mana)
+    </td>
+    <td style="color: darkred;">
+        @Html.DisplayFor(modelItem => item.HP_Initial)
+    </td>
+    <td style="color: darkred;">
+        @Html.DisplayFor(modelItem => item.HP_Max)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NPC)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Maps)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>

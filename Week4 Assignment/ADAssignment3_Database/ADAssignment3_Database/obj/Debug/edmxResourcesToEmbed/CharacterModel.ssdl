@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROG455FA23Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Character">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" />
+    <Property Name="Element_Type" Type="varchar(max)" />
+    <Property Name="Job_Class" Type="varchar(max)" />
+    <Property Name="ATK" Type="int" />
+    <Property Name="DEF" Type="int" />
+    <Property Name="Mana" Type="int" />
+    <Property Name="HP_Initial" Type="int" />
+    <Property Name="HP_Max" Type="int" />
+    <Property Name="NPC" Type="bit" />
+  </EntityType>
+  <EntityType Name="Map">
+    <Key>
+      <PropertyRef Name="MapID" />
+    </Key>
+    <Property Name="MapID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="MapName" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Map__ID__3C69FB99">
+    <End Role="Character" Type="Self.Character" Multiplicity="1" />
+    <End Role="Map" Type="Self.Map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Character">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Map">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PROG455FA23ModelStoreContainer">
+    <EntitySet Name="Character" EntityType="Self.Character" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Map" EntityType="Self.Map" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Map__ID__3C69FB99" Association="Self.FK__Map__ID__3C69FB99">
+      <End Role="Character" EntitySet="Character" />
+      <End Role="Map" EntitySet="Map" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

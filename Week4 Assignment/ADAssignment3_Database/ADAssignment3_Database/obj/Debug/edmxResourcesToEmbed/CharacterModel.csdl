@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROG455FA23Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Character">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Element_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Job_Class" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ATK" Type="Int32" />
+    <Property Name="DEF" Type="Int32" />
+    <Property Name="Mana" Type="Int32" />
+    <Property Name="HP_Initial" Type="Int32" />
+    <Property Name="HP_Max" Type="Int32" />
+    <Property Name="NPC" Type="Boolean" />
+    <NavigationProperty Name="Maps" Relationship="PROG455FA23Model.FK__Map__ID__3C69FB99" FromRole="Character" ToRole="Map" />
+  </EntityType>
+  <EntityContainer Name="PROG455FA23Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Characters" EntityType="Self.Character" />
+    <EntitySet Name="Maps" EntityType="PROG455FA23Model.Map" />
+    <AssociationSet Name="FK__Map__ID__3C69FB99" Association="PROG455FA23Model.FK__Map__ID__3C69FB99">
+      <End Role="Character" EntitySet="Characters" />
+      <End Role="Map" EntitySet="Maps" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Map">
+    <Key>
+      <PropertyRef Name="MapID" />
+    </Key>
+    <Property Name="MapID" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="MapName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Character" Relationship="PROG455FA23Model.FK__Map__ID__3C69FB99" FromRole="Map" ToRole="Character" />
+  </EntityType>
+  <Association Name="FK__Map__ID__3C69FB99">
+    <End Type="PROG455FA23Model.Character" Role="Character" Multiplicity="1" />
+    <End Type="PROG455FA23Model.Map" Role="Map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Character">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Map">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
